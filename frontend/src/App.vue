@@ -11,6 +11,7 @@
         <div class="viewer-area"><ProteinViewer3D /></div>
       </div>
       <ConformationTable v-if="store.result" />
+      <ComparisonPanel />
     </main>
   </div>
 </template>
@@ -20,6 +21,7 @@ import ControlPanel from "./components/ControlPanel.vue"
 import RamachandranPlot from "./components/RamachandranPlot.vue"
 import ProteinViewer3D from "./components/ProteinViewer3D.vue"
 import ConformationTable from "./components/ConformationTable.vue"
+import ComparisonPanel from "./components/ComparisonPanel.vue"
 import { useProteinStore } from "./store/protein"
 import type { ProteinParams } from "./types"
 
