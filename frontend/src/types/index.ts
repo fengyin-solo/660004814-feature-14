@@ -18,3 +18,12 @@ export interface SamplingResult {
   energyRange: [number, number]
   stats: { alpha: number; beta: number; left: number; disallowed: number }
 }
+
+export interface BatchRecord {
+  id: string
+  label: string
+  createdAt: number
+  params: ProteinParams
+  /** null 或 conformations 为空均视为“空批次” */
+  result: SamplingResult | null
+}
